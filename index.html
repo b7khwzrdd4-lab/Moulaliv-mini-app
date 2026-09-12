@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Moulaliv 13/83</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand">
+        <div class="logo">ML</div>
+        <div>
+          <div class="title">Moulaliv 13/83</div>
+          <div class="sub">Bienvenue 👋</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="screen active">
+      <div class="hero">
+        <h1>Bienvenue chez Moulaliv 13/83</h1>
+        <p>Retrouvez notre sélection de produits légaux.</p>
+      </div>
+
+      <div class="menu-grid">
+        <button class="menu-card" onclick="showScreen('shop')"><span>🛍️</span><b>Boutique</b><small>Voir les produits</small></button>
+        <button class="menu-card" onclick="showScreen('orders')"><span>📦</span><b>Mes commandes</b><small>Suivre mes commandes</small></button>
+        <button class="menu-card" onclick="showScreen('contact')"><span>📞</span><b>Contact</b><small>Nous contacter</small></button>
+        <button class="menu-card" onclick="showScreen('info')"><span>ℹ️</span><b>Informations</b><small>À propos</small></button>
+      </div>
+    </section>
+
+    <section id="shop" class="screen">
+      <button class="back" onclick="showScreen('home')">‹ Retour</button>
+      <h2>Boutique</h2>
+      <div class="categories">
+        <button class="chip active">Tous</button>
+        <button class="chip">Nouveautés</button>
+        <button class="chip">Promotions</button>
+      </div>
+      <div class="products">
+        <article class="product">
+          <div class="product-img">PRODUIT</div>
+          <h3>Produit légal</h3>
+          <p>Présentation du produit.</p>
+          <div class="product-bottom"><b>— €</b><button onclick="addToCart()">Ajouter</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cart" class="screen">
+      <button class="back" onclick="showScreen('shop')">‹ Boutique</button>
+      <h2>Panier</h2>
+      <div id="cartContent" class="empty">Votre panier est vide.</div>
+    </section>
+
+    <section id="orders" class="screen">
+      <button class="back" onclick="showScreen('home')">‹ Retour</button>
+      <h2>Mes commandes</h2>
+      <div class="empty">Aucune commande pour le moment.</div>
+    </section>
+
+    <section id="contact" class="screen">
+      <button class="back" onclick="showScreen('home')">‹ Retour</button>
+      <h2>Contact</h2>
+      <div class="info-card"><b>📞 Contact</b><p>Ajoute ici ton moyen de contact.</p></div>
+      <div class="info-card"><b>🕐 Horaires</b><p>Ajoute ici tes horaires.</p></div>
+    </section>
+
+    <section id="info" class="screen">
+      <button class="back" onclick="showScreen('home')">‹ Retour</button>
+      <h2>Informations</h2>
+      <div class="info-card"><p>Bienvenue chez Moulaliv 13/83.</p><p>Cette Mini App est destinée à présenter et commander uniquement des produits légaux.</p></div>
+    </section>
+
+    <nav class="bottom">
+      <button onclick="showScreen('home')">⌂<span>Accueil</span></button>
+      <button onclick="showScreen('shop')">🛍️<span>Boutique</span></button>
+      <button onclick="showScreen('cart')">🛒<span>Panier</span></button>
+      <button onclick="showScreen('info')">ℹ️<span>Info</span></button>
+    </nav>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
