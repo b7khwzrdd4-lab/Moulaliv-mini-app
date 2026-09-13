@@ -83,3 +83,4 @@ function importData(file){if(!file)return;const r=new FileReader();r.onload=()=>
 function resetAll(){if(confirm("Réinitialiser toute la configuration ?")){state=structuredClone(defaults);save();render();}}
 function render(){applyTheme();let content=page==="home"?home():page==="shop"?shop():page==="cart"?cartPage():page==="orders"?orders():page==="contact"?contact():page==="info"?info():admin();document.getElementById("app").innerHTML=`<div class="wrap">${content}</div>${nav()}`}
 render();
+
