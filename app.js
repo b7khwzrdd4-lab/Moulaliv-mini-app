@@ -8,7 +8,7 @@ function addToCart(){
   cart++;
   const el=document.getElementById('cartContent');
   el.className='';
-  el.innerHTML=`<div class="info-card"><b>Produit légal</b><p>Quantité : ${cart}</p><button class="product-bottom button" onclick="showScreen('shop')">Continuer mes achats</button></div>`;
+  el.innerHTML=`<div class="info-card"><b>Produit</b><p>Quantité : ${cart}</p><button class="product-bottom button" onclick="showScreen('shop')">Continuer mes achats</button></div>`;
   showScreen('cart');
 }
 if(window.Telegram?.WebApp){
